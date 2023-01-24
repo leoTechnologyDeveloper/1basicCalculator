@@ -1,0 +1,130 @@
+body{
+    background-color: black;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+header{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    margin-bottom: 5%;
+}
+
+.calculatorContainer{
+    width: 30%;
+    height: 70%;
+    margin: 50px auto;
+    padding: 3%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+    background-color: darkblue;
+    display: grid;
+    grid-template-areas: 
+    "number1   number2"
+    "operator1 operator2"
+    "operator3 operator4"
+    "equal     equal"
+    "result    result"
+    ;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    box-shadow: 2px 3px 195px 0px rgba(103,226,240,0.75);
+    -webkit-box-shadow: 2px 3px 195px 0px rgba(103,226,240,0.75);
+    -moz-box-shadow: 2px 3px 195px 0px rgba(103,226,240,0.75);
+}
+
+.calculatorContainer input{
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.calculatorContainer input:nth-child(1){
+    grid-area: number1;
+    padding: 15px 0;
+}
+
+.calculatorContainer input:nth-child(2){
+    background-color: black;
+    color: tomato;
+    font-size: 2rem;
+    grid-area: operator1;
+    cursor: pointer;
+}
+
+.calculatorContainer input:nth-child(3){
+    background-color: black;
+    color: tomato;
+    font-size: 2rem;
+    grid-area: operator2;
+    cursor: pointer;
+}
+
+.calculatorContainer input:nth-child(4){
+    background-color: black;
+    color: tomato;
+    font-size: 2rem;
+    grid-area: operator3;
+    cursor: pointer;
+}
+.calculatorContainer input:nth-child(5){
+    background-color: black;
+    color: tomato;
+    font-size: 2rem;
+    grid-area: operator4;
+    cursor: pointer;
+}
+
+.calculatorContainer input:nth-child(2):hover,
+.calculatorContainer input:nth-child(3):hover,
+.calculatorContainer input:nth-child(4):hover,
+.calculatorContainer input:nth-child(5):hover{
+    background-color: tomato;
+    color: black;
+}
+
+.calculatorContainer input:nth-child(2):focus,
+.calculatorContainer input:nth-child(3):focus,
+.calculatorContainer input:nth-child(4):focus,
+.calculatorContainer input:nth-child(5):focus {
+    background-color: tomato;
+    color: black;
+} 
+
+.calculatorContainer input:nth-child(6){
+    grid-area: number2;
+    padding: 15px 0;
+}
+
+
+.calculatorContainer button{
+    color: yellow;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    grid-area: calcular;
+    cursor: pointer;
+}
+
+.calculatorContainer .sign{
+    font-size: 3rem; 
+    grid-area: equal;
+    text-align: center;
+}
+.calculatorContainer .result{
+   font-size: 3rem;
+   grid-area: result;
+   text-align: center;
+ 
+}
